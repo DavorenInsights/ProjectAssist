@@ -432,7 +432,7 @@ with st.expander("⚠️ Section 6 — Risk Register"):
 st.markdown("---")
 col1, col2, col3 = st.columns([1,1,2])
 with col1:
-    if st.button("🔬 Go to TRL Calculator", use_container_width=True):
+    if st.button("🔬 Go to Financing Options", use_container_width=True):
         st.switch_page("pages/2_TRL_Calculator.py")
 with col2:
     if st.button("📄 View Summary & Export", use_container_width=True, type="primary"):
