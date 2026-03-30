@@ -241,3 +241,79 @@ p, li, span, div, .stCaption {
 @media (max-width: 860px) {
   .hero-content { flex-direction: column; align-items: flex-start; }
 }
+
+/* ========================= */
+/* FIX: SIDEBAR READABILITY  */
+/* ========================= */
+
+/* Sidebar background */
+section[data-testid="stSidebar"] {
+  background: #0B6B4A !important; /* dark green */
+}
+
+/* Sidebar text */
+section[data-testid="stSidebar"] * {
+  color: #ffffff !important;
+}
+
+/* Sidebar headings */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] h4 {
+  color: #ffffff !important;
+}
+
+/* Sidebar labels (inputs, radios, etc.) */
+section[data-testid="stSidebar"] label {
+  color: #ffffff !important;
+}
+
+/* Sidebar markdown text */
+section[data-testid="stSidebar"] .stMarkdown {
+  color: #ffffff !important;
+}
+
+
+/* ========================= */
+/* FIX: SELECTBOX + RADIO UI */
+/* ========================= */
+
+/* Dropdown selected value */
+div[data-baseweb="select"] span {
+  color: var(--charcoal) !important;
+}
+
+/* Dropdown menu items */
+div[data-baseweb="menu"] {
+  background: #ffffff !important;
+}
+
+div[data-baseweb="menu"] * {
+  color: var(--charcoal) !important;
+}
+
+
+/* ========================= */
+/* FIX: RADIO / CHECKBOX     */
+/* ========================= */
+
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label {
+  color: var(--charcoal) !important;
+}
+
+
+/* ========================= */
+/* FIX: SUMMARY PAGE TEXT    */
+/* ========================= */
+
+.summary-block,
+.summary-block * {
+  color: var(--charcoal) !important;
+}
+
+/* If using custom HTML blocks */
+div[style*="background"] {
+  color: var(--charcoal) !important;
+}
