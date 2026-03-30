@@ -474,3 +474,86 @@ div[data-baseweb="menu"] * {
     align-items: flex-start;
   }
 }
+
+
+/* ------------------------- */
+/* Guided application fixes  */
+/* ------------------------- */
+
+/* Force light backgrounds and dark text for typed input areas */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input,
+[data-testid="stDateInputField"] input,
+[data-testid="stTimeInput"] input {
+  background: #ffffff !important;
+  color: var(--charcoal) !important;
+  -webkit-text-fill-color: var(--charcoal) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+}
+
+/* Placeholder text */
+[data-testid="stTextInput"] input::placeholder,
+[data-testid="stTextArea"] textarea::placeholder,
+[data-testid="stNumberInput"] input::placeholder {
+  color: #7a8680 !important;
+  opacity: 1 !important;
+}
+
+/* Text area wrapper sometimes stays dark unless the container is forced too */
+[data-testid="stTextArea"] div,
+[data-testid="stTextInput"] div,
+[data-testid="stNumberInput"] div {
+  color: var(--charcoal) !important;
+}
+
+/* Guided blocks / expanders / containers with headings */
+.stExpander details,
+.stExpander summary,
+.stExpander summary p,
+.stExpander label,
+.stExpander h1,
+.stExpander h2,
+.stExpander h3,
+.stExpander h4,
+.stExpander h5,
+.stExpander h6,
+.section-block h1,
+.section-block h2,
+.section-block h3,
+.section-block h4,
+.section-block h5,
+.section-block h6 {
+  color: var(--green-dark) !important;
+}
+
+/* Keep expander surfaces light */
+.stExpander details {
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+}
+
+.stExpander summary {
+  background: #f7faf8 !important;
+}
+
+/* Markdown text inside form-like content areas */
+.section-block p,
+.section-block li,
+.stExpander p,
+.stExpander li,
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li {
+  color: var(--charcoal) !important;
+}
+
+/* Textarea focus */
+[data-testid="stTextArea"] textarea:focus,
+[data-testid="stTextInput"] input:focus,
+[data-testid="stNumberInput"] input:focus {
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 1px rgba(11, 107, 74, 0.2) !important;
+  outline: none !important;
+}
+
